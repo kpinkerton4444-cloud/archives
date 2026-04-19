@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Patrons of the Restricted Section</title>
     <style>
         body {
-            background: #0a0d08; /* Obsidian Ink */
-            color: #d4c3a3; /* Vellum */
+            background-color: #0a0d08; /* Obsidian Ink */
+            color: #d4c3a3; /* Aged Vellum */
             font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
             display: flex;
             align-items: center;
@@ -13,46 +14,78 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            /* Creating a subtle "vignette" effect for curated gloom */
+            background: radial-gradient(circle, #1a1e16 0%, #0a0d08 100%);
         }
-        .vault-container {
+
+        .vault-frame {
             text-align: center;
-            border: 1px solid #4b1f1f; /* Wicked Raspberry */
+            border: 1px solid #2d3628; /* Overgrown Solarium */
             padding: 60px;
-            background: rgba(13, 17, 10, 0.8);
-            box-shadow: 0 0 30px #000;
+            background: rgba(13, 17, 10, 0.9);
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
         }
+
+        .trident {
+            font-size: 60px;
+            color: #4b1f1f; /* The Wicked Pour */
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(75, 31, 31, 0.5);
+        }
+
         h1 {
             letter-spacing: 10px;
             text-transform: uppercase;
             font-weight: normal;
-            margin-bottom: 5px;
+            margin: 10px 0;
+            font-size: 2rem;
         }
+
         p {
             font-style: italic;
             opacity: 0.6;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
         }
-        .btn {
+
+        .petition-btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 15px 35px;
             border: 1px solid #4b1f1f;
             color: #d4c3a3;
             text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
             letter-spacing: 3px;
-            transition: 0.5s;
+            transition: all 0.5s ease;
         }
-        .btn:hover {
-            background: #4b1f1f;
+
+        .petition-btn:hover {
+            background-color: #4b1f1f;
             color: #0a0d08;
             box-shadow: 0 0 20px #4b1f1f;
+            cursor: pointer;
+        }
+
+        .librarian-seal {
+            position: fixed;
+            bottom: 30px;
+            font-size: 10px;
+            letter-spacing: 5px;
+            opacity: 0.3;
         }
     </style>
 </head>
 <body>
-    <div class="vault-container">
+
+    <div class="vault-frame">
+        <div class="trident">ψ</div>
         <h1>Restricted Section</h1>
-        <p>A destination for the uncatalogued soul.</p>
-        <a href="mailto:archivist@hekatescript.com?subject=Petition%20for%20Entry" class="btn">Petition for Entry</a>
+        <p>The ink is wet. The doors are barred.</p>
+        <a href="mailto:archivist@hekatescript.com?subject=Petition%20for%20Entry" class="petition-btn">Petition for Entry</a>
     </div>
+
+    <div class="librarian-seal">K.M.P. | HEAD LIBRARIAN</div>
+
 </body>
 </html>
